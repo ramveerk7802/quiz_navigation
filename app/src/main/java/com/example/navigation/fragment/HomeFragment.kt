@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.example.navigation.R
 import com.example.navigation.databinding.FragmentHomeBinding
@@ -21,6 +22,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this
+//        (activity as AppCompatActivity).supportActionBar?.title = "Home"
 
         binding.palyButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_homeFragment2_to_quizFragment)
@@ -28,6 +30,7 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
+
 
 
 }
